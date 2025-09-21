@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infografik: Tingkah Laku Mencederakan Diri Sendiri dalam Kalangan Remaja</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 400px;
+            }
+        }
+    </style>
+</head>
+<body class="bg-[#F0F8FF]">
+
+    <main id="infografik" class="container mx-auto px-4 py-8 md:px-8 md:py-12">
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-[#005F73] mb-4">Tingkah Laku Mencederakan Diri Sendiri dalam Kalangan Remaja</h1>
+            <p class="text-lg text-[#0A9396] max-w-3xl mx-auto">Memahami isu kesihatan mental yang semakin meningkat dan cara untuk mendapatkan bantuan.</p>
+        </header>
+
+        <section id="definition" class="mb-16">
+            <div class="bg-white rounded-2xl shadow-lg p-8 text-center border-t-8 border-[#EE9B00]">
+                <h2 class="text-3xl font-bold text-[#005F73] mb-4">Apakah Tingkah Laku Mencederakan Diri Sendiri?</h2>
+                <p class="text-base text-gray-600 leading-relaxed max-w-2xl mx-auto mb-4">Ia adalah tindakan sengaja menyebabkan kecederaan kepada tubuh sendiri, yang sering dikaitkan dengan pelbagai simptom psikiatri seperti kemurungan dan gangguan keresahan.</p>
+                <p class="text-sm font-semibold text-white bg-[#0A9396] rounded-full py-2 px-4 inline-block">Dikenali sebagai "Non-Suicidal Self Injury" (NSSI)</p>
+            </div>
+        </section>
+
+        <section id="statistics" class="mb-16">
+            <h2 class="text-3xl font-bold text-[#005F73] text-center mb-8">Fakta & Statistik Kesihatan Mental Remaja</h2>
+            <p class="text-center text-gray-600 mb-10 max-w-3xl mx-auto">Data menunjukkan satu gambaran yang membimbangkan tentang kesihatan mental di kalangan golongan muda di Malaysia. Statistik ini menekankan keperluan mendesak untuk kesedaran dan sokongan.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div class="bg-white rounded-2xl shadow-lg p-6">
+                    <h3 class="text-xl font-bold text-[#005F73] mb-4 text-center">Prevalens Simptom Psikiatri (13-17 Tahun)</h3>
+                    <div class="chart-container">
+                        <canvas id="mentalHealthStatsChart"></canvas>
+                    </div>
+                </div>
+                <div class="space-y-6">
+                    <div class="bg-[#94D2BD] text-white rounded-2xl shadow-lg p-8 text-center">
+                        <p class="text-xl font-semibold mb-2">Remaja Mengalami Kemurungan</p>
+                        <p class="text-5xl font-black text-[#005F73]">1 dari 5</p>
+                        <p class="font-bold">(18.3%)</p>
+                    </div>
+                    <div class="bg-[#E9D8A6] text-[#CA6702] rounded-2xl shadow-lg p-8 text-center">
+                        <p class="text-xl font-semibold mb-2">Kanak-Kanak di Malaysia Mengalami Masalah Kesihatan Mental</p>
+                        <p class="text-5xl font-black">424,000</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="types" class="mb-16">
+            <h2 class="text-3xl font-bold text-[#005F73] text-center mb-8">Jenis-jenis Tingkah Laku Mencederakan Diri</h2>
+            <p class="text-center text-gray-600 mb-10 max-w-3xl mx-auto">Perilaku ini boleh muncul dalam pelbagai bentuk. Mengenal pasti tanda-tanda ini adalah langkah pertama untuk memberi bantuan.</p>
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 text-center">
+                <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center justify-center aspect-square"><span class="text-4xl mb-2">🔪</span><p class="font-semibold text-[#005F73]">Mengelar</p></div>
+                <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center justify-center aspect-square"><span class="text-4xl mb-2">💅</span><p class="font-semibold text-[#005F73]">Mencakar</p></div>
+                <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center justify-center aspect-square"><span class="text-4xl mb-2">👊</span><p class="font-semibold text-[#005F73]">Memukul Diri</p></div>
+                <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center justify-center aspect-square"><span class="text-4xl mb-2">🔥</span><p class="font-semibold text-[#005F73]">Membakar Diri</p></div>
+                <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center justify-center aspect-square col-span-2 sm:col-span-1 lg:col-span-1"><span class="text-4xl mb-2">💆</span><p class="font-semibold text-[#005F73]">Menarik Rambut</p></div>
+            </div>
+        </section>
+
+        <section id="theory" class="mb-16">
+            <h2 class="text-3xl font-bold text-[#005F73] text-center mb-8">Pandangan Teori Perkembangan Psikososial Erikson</h2>
+            <p class="text-center text-gray-600 mb-10 max-w-3xl mx-auto">Teori Erikson membantu kita memahami bagaimana konflik dalam peringkat perkembangan awal boleh menyumbang kepada masalah kesihatan mental pada usia remaja.</p>
+            <div class="relative max-w-2xl mx-auto">
+                <div class="border-l-4 border-[#0A9396] absolute h-full top-0 left-4"></div>
+                <div class="mb-10 pl-12">
+                    <div class="bg-white rounded-2xl shadow-lg p-6 border-l-8 border-[#EE9B00]">
+                        <span class="font-bold text-sm text-[#CA6702]">PERINGKAT 4 (6-12 TAHUN)</span>
+                        <h3 class="text-xl font-bold text-[#005F73] mt-1 mb-2">Berdaya Usaha VS Rasa Rendah Diri</h3>
+                        <p class="text-gray-600">Kegagalan untuk menguasai kemahiran baharu dan mencapai matlamat pada peringkat ini boleh menyebabkan remaja mengembangkan perasaan rendah diri dan keraguan terhadap keupayaan mereka.</p>
+                    </div>
+                </div>
+                <div class="mb-10 pl-12">
+                    <div class="bg-white rounded-2xl shadow-lg p-6 border-l-8 border-[#AE2012]">
+                        <span class="font-bold text-sm text-[#9B2226]">PERINGKAT 5 (12-18 TAHUN)</span>
+                        <h3 class="text-xl font-bold text-[#005F73] mt-1 mb-2">Identiti VS Kekeliruan Peranan</h3>
+                        <p class="text-gray-600">Remaja meneroka identiti diri mereka. Kekeliruan tentang peranan dan identiti boleh menjadikan mereka lebih terdedah kepada pengaruh negatif dan isu kesihatan mental. Ego yang lemah akibat konflik yang tidak selesai menyukarkan mereka mengendalikan emosi.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="help">
+            <h2 class="text-3xl font-bold text-[#005F73] text-center mb-8">Siapa Yang Boleh Membantu?</h2>
+            <p class="text-center text-gray-600 mb-10 max-w-3xl mx-auto">Bantuan sentiasa ada. Adalah penting untuk menghubungi sumber yang betul untuk mendapatkan sokongan dan bimbingan.</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-2xl shadow-lg p-8 text-center hover:shadow-2xl transition-shadow duration-300">
+                    <p class="text-6xl mb-4">👨‍🏫</p>
+                    <h3 class="text-2xl font-bold text-[#005F73] mb-2">Guru & Kaunselor</h3>
+                    <p class="text-gray-600">Mereka boleh memberikan sokongan awal yang selamat dan sulit di persekitaran sekolah.</p>
+                </div>
+                <div class="bg-white rounded-2xl shadow-lg p-8 text-center hover:shadow-2xl transition-shadow duration-300">
+                    <p class="text-6xl mb-4">👨‍👩‍👧‍👦</p>
+                    <h3 class="text-2xl font-bold text-[#005F73] mb-2">Ibu Bapa & Keluarga</h3>
+                    <p class="text-gray-600">Sebagai sistem sokongan terdekat, peranan mereka adalah penting dalam memberikan kasih sayang dan pemahaman.</p>
+                </div>
+                <div class="bg-white rounded-2xl shadow-lg p-8 text-center hover:shadow-2xl transition-shadow duration-300">
+                    <p class="text-6xl mb-4">⚕️</p>
+                    <h3 class="text-2xl font-bold text-[#005F73] mb-2">Pakar Kesihatan</h3>
+                    <p class="text-gray-600">Pakar profesional boleh memberikan diagnosis yang tepat dan pelan rawatan yang berkesan.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Butang Download -->
+        <div class="text-center mt-12">
+            <button 
+                onclick="downloadImage()" 
+                class="bg-[#0A9396] text-white px-6 py-3 rounded-xl shadow hover:bg-[#005F73] transition">
+                📥 Download Infografik
+            </button>
+        </div>
+    </main>
+    
+    <footer class="text-center py-6 bg-[#005F73] mt-12">
+        <p class="text-white text-sm">Maklumat ini bertujuan untuk kesedaran dan bukan pengganti nasihat perubatan profesional.</p>
+    </footer>
+
+    <script>
+        // Fungsi Download PNG
+        function downloadImage() {
+            const element = document.getElementById("infografik");
+            html2canvas(element, { scale: 2 }).then(canvas => {
+                let link = document.createElement("a");
+                link.download = "infografik.png";
+                link.href = canvas.toDataURL("image/png");
+                link.click();
+            });
+        }
+
+        // Chart.js
+        document.addEventListener('DOMContentLoaded', function () {
+            const ctx = document.getElementById('mentalHealthStatsChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Keresahan', 'Kemurungan', 'Stres'],
+                    datasets: [{
+                        label: 'Peratusan Remaja (%)',
+                        data: [39.7, 18.3, 9.6],
+                        backgroundColor: [
+                            '#0A9396',
+                            '#94D2BD',
+                            '#E9D8A6'
+                        ],
+                        borderColor: [
+                            '#005F73',
+                            '#0A9396',
+                            '#CA6702'
+                        ],
+                        borderWidth: 2,
+                        borderRadius: 8,
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    indexAxis: 'y',
+                    scales: {
+                        x: {
+                            beginAtZero: true,
+                            grid: { display: false },
+                            ticks: {
+                                callback: function(value) {
+                                    return value + '%'
+                                }
+                            }
+                        },
+                        y: { grid: { display: false } }
+                    },
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            callbacks: {
+                                title: function(tooltipItems) {
+                                    const item = tooltipItems[0];
+                                    let label = item.chart.data.labels[item.dataIndex];
+                                    return Array.isArray(label) ? label.join(' ') : label;
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
